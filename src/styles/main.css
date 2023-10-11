@@ -3,10 +3,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #58cef1;
+    background: #5a0505;
     user-select: none;
   }
-  
   .container {
     position: relative;
     display: flex;
@@ -17,18 +16,17 @@ body {
     background: linear-gradient(
       325deg,
       #03001e 0%,
-      #026a8a 30%,
-      #39c8f3 70%,
-      #fdeff9 100%
+      #5e0701 30%,
+      #f5351c 70%,
+      #0a0a0a 100%
     );
     padding: 40px 60px;
   }
   
   h2 {
-    font-size: 3em;
+    font-size: 2rem;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
   }
   
   .reset {
@@ -47,6 +45,7 @@ body {
   .reset:focus {
     color: #ec38bc;
     background-color: #262809;
+    margin: 20px 0px;
   }
   
   .game {
@@ -65,11 +64,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-  
-    font-size: 3em;
+    background:#fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #00000010;
+    font-size: .1em;
     transform: rotateY(180deg);
     transition: 0.25s;
+
   }
   
   .item::after {
@@ -77,6 +80,10 @@ body {
     position: absolute;
     inset: 0;
     background: #404040;
+    background-image: url(../images/Marvel.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     /* opacity: 0.85; */
     transition: 0.25s;
     transform: rotateY(0deg);
@@ -91,3 +98,44 @@ body {
   .boxMatch::after {
     transform: rotateY(180deg);
   }
+ .capitanMarvel{
+  background-image: url(../images/CapitanMavel.png);
+ }
+ .capitaoAmerica{
+  background-image: url(../images/CapitaoAmerica.png);
+ }
+ .homemAranha{
+  background-image: url(../images/HomemAranha.png);
+ }
+ .homemDeFerro{
+  background-image: url(../images/HomemDeFerro.png);
+ }
+ .hulk{
+  background-image: url(../images/Hulk.png);
+ }
+ .logan{
+  background-image: url(../images/Logan.png);
+ }
+ .phoenix{
+  background-image: url(../images/Phoenix.png);
+ }
+ .thor{
+  background-image: url(../images/Thor.png);
+ }
+ @media screen and (max-width: 600px){
+    .container{
+      padding: 10px 0px;
+    }
+    h2{
+      font-size: 1rem;
+    }
+    .game{
+      width: 350px;
+      height: 350px;
+      padding: 10px;
+    }
+    .item{
+      width: 75px;
+      height: 75px;
+    }
+ }

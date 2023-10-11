@@ -17,14 +17,26 @@ const emojis = [
     "👼"
 ]
 let openCard = []
-
+const persons = [
+    "capitanMarvel", "capitanMarvel",
+    "capitaoAmerica", "capitaoAmerica",
+    "homemAranha", "homemAranha",
+    "homemDeFerro", "homemDeFerro",
+    "hulk","hulk",
+    "logan","logan",
+    "phoenix","phoenix",
+    "thor", "thor"
+]
+let shuffpersons = persons.sort(()=>(Math.random()>0.5?2:-1))
 let shuffEmojis = emojis.sort(()=>(Math.random()>0.5?2:-1))
 
-for(let i=0; i<emojis.length;i++){
+for(let i=0; i<persons.length;i++){
     let box = document.createElement("div")
     box.className = "item"
-    box.innerHTML = shuffEmojis[i]
+    box.classList.add(shuffpersons[i])
+    box.innerHTML = shuffpersons[i]
     box.onclick = handleClick
+    
     document.querySelector(".game").appendChild(box)
 }
 function handleClick(){
